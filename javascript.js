@@ -6,3 +6,22 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function playRound(playerSelection, computerSelection) {
+    
+}
+    
+
+
+const playerSelection = userInput => {
+    userInput = userInput.toLowerCase();
+    console.log(userInput);
+    
+}
+
+
+
+console.log(playerSelection('paper'));
+//const computerSelection = getComputerChoice();
+
+//console.log(playRound(playerSelection, computerSelection));
