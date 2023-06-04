@@ -1,8 +1,17 @@
 function getComputerChoice() {
             
-    const choices = ["rock", "paper", "scissors"]
-    let random1 = choices[Math.floor(Math.random() * choices.length)]
-    return random1;
+    
+    const randomNumber = Math.floor(Math.random() * 3);
+    
+    switch (randomNumber) {
+        case 0:
+            return 'rock';
+        case 1:
+            return 'paper';
+        case 2:
+            return 'scissors';
+    }
+
 }
 
 console.log(getComputerChoice());
@@ -22,6 +31,7 @@ const playerSelection = userInput => {
 
 
 console.log(playerSelection('paper'));
-//const computerSelection = getComputerChoice();
+
+const computerSelection = getComputerChoice();
 
 //console.log(playRound(playerSelection, computerSelection));
