@@ -26,36 +26,38 @@ const playerChoice = userInput => {
 let playerScore = 0;
 let computerScore = 0;
 
-
-
-const computerSelection = getComputerChoice();
-
-function playRound(playerSelection, computerSelection) {
+const winnerRules = (playerSelection, computerSelection) => {
     if (playerSelection === computerSelection) {
-        return "Oops, looks like it's a tie!";
-    
-    } 
+        return "It's a tie!"
+    }
     if (playerSelection === 'rock') {
-        if (computerSelection === 'paper') {
-            return "Sorry, computer won!";
+        if (computerSelection === 'paper') { 
+            computerScore += 1;
+            return "You lose! Paper beats rock";
         } else {
-            return "Congrats you won!";
+            playerScore += 1;
+            return "Congrats, you won!";
         }
     }
-} 
-    
+    if (playerSelection === 'paper') {
+        if (computerSelection === 'scissors') {
+            computerScore += 1;
+            return "You lose! Scissors beat paper"; 
+        } else {
+            playerScore += 1;
+            return "Congrats, you won!";
+        }
+    }
+    if (playerSelection === 'scissors') {
+        if (computerSelection === 'rock') {
+            computerScore += 1;
+            return "You lose! Rock beats scissors";
+        } else {
+            playerScore += 1;
+            return "Congrats, you won!";
+        }
+
+    }
+}
 
 
-//const playerSelection = userInput => {
-   // userInput = userInput.toLowerCase();
-    //console.log(userInput);
-    
-//}
-
-
-
-//console.log(playerSelection('rock'));
-
-//const computerSelection = getComputerChoice();
-
-playRound();
