@@ -73,5 +73,17 @@ const playRound = () => {
     playRound();
  }
 
- 
+ function winGame() {
+    if (playerScore >= 2) {
+        return "You win!"; 
+        
+    } else if (computerScore >= 2) {
+        return "Computer wins!" 
+    
+    } else {
+        return "Looks like it's a tie!"
+    }
+    
+} 
+
 
