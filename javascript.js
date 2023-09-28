@@ -86,4 +86,14 @@ const playRound = () => {
     
 } 
 
+game();
+game();
+game();
+game();
+game();
+console.log(winGame());
+
+console.log(playerScore);
+console.log(computerScore);
+
 
