@@ -60,4 +60,13 @@ const winnerRules = (playerSelection, computerSelection) => {
     }
 }
 
+const playRound = () => {
+    const playerSelection = playerChoice(prompt());
+    const computerSelection = getComputerChoice();     
+    console.log(`You threw: ${playerSelection}`);
+    console.log(`Computer threw: ${computerSelection}`);
+
+    console.log(winnerRules(playerSelection, computerSelection));
+ }
+
 
