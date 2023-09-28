@@ -69,4 +69,9 @@ const playRound = () => {
     console.log(winnerRules(playerSelection, computerSelection));
  }
 
+ function game() {
+    playRound();
+ }
+
+ 
 
