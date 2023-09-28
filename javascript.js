@@ -1,6 +1,4 @@
-function getComputerChoice() {
-            
-    
+const getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     
     switch (randomNumber) {
@@ -14,22 +12,21 @@ function getComputerChoice() {
 
 }
 
-console.log(getComputerChoice());
+//console.log(getComputerChoice());
 
-const playerSelection = userInput => {
+const playerChoice = userInput => {
     userInput = userInput.toLowerCase();
-    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors')
-{
-    return userInput
-} else {
-    console.log("Error!")
-}    
-    
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+        return userInput
+    } else {
+        console.log('Error')
+    }
 }
 
+let playerScore = 0;
+let computerScore = 0;
 
 
-console.log(playerSelection('rock'));
 
 const computerSelection = getComputerChoice();
 
