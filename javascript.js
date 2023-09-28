@@ -16,22 +16,49 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
-function playRound(playerSelection, computerSelection) {
-    
-}
-    
-
-
 const playerSelection = userInput => {
     userInput = userInput.toLowerCase();
-    console.log(userInput);
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors')
+{
+    return userInput
+} else {
+    console.log("Error!")
+}    
     
 }
 
 
 
-console.log(playerSelection('paper'));
+console.log(playerSelection('rock'));
 
 const computerSelection = getComputerChoice();
 
-//console.log(playRound(playerSelection, computerSelection));
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return "Oops, looks like it's a tie!";
+    
+    } 
+    if (playerSelection === 'rock') {
+        if (computerSelection === 'paper') {
+            return "Sorry, computer won!";
+        } else {
+            return "Congrats you won!";
+        }
+    }
+} 
+    
+
+
+//const playerSelection = userInput => {
+   // userInput = userInput.toLowerCase();
+    //console.log(userInput);
+    
+//}
+
+
+
+//console.log(playerSelection('rock'));
+
+//const computerSelection = getComputerChoice();
+
+playRound();
